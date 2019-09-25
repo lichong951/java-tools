@@ -44,10 +44,19 @@ public class DateUtils {
     public final static String YYYY_MM_DD_HH="yyyy-MM-dd HH";
     public final static String YYYY_MM_DD="yyyy-MM-dd";
 
+    @Deprecated
     public static String getDate(String format){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
         Date date=new Date(System.currentTimeMillis());
 
         return simpleDateFormat.format(date);
     }
+    public static String getDate(String format,long time){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+        Date date=new Date(time);
+
+        return simpleDateFormat.format(date);
+    }
+
+
 }
